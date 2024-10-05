@@ -1,0 +1,341 @@
+/* 引入自定义字体 */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Microsoft YaHei', sans-serif;
+    background-color: #fdfdfd;
+    color: #333;
+}
+
+/* 导航栏 */
+nav {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(255, 105, 180, 0.9);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    z-index: 100;
+}
+
+nav .logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 2em;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffe4e1;
+}
+
+/* 首页横幅 */
+.banner {
+    position: relative;
+    background: url('images/banner.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner-content {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.banner-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-family: 'Pacifico', cursive;
+    animation: fadeInDown 1s ease;
+}
+
+.banner-content p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease;
+}
+
+.banner-content .btn {
+    text-decoration: none;
+    background-color: #ff69b4;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+    animation: fadeInUp 1.5s ease;
+}
+
+.banner-content .btn:hover {
+    background-color: #db5a9d;
+}
+
+/* 动画效果 */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 写给她的情书 */
+.letter-section {
+    padding: 100px 0;
+    background-color: #fff0f5;
+    text-align: center;
+}
+
+.letter-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    font-family: 'Pacifico', cursive;
+}
+
+.poem {
+    font-size: 1.2em;
+    line-height: 1.8;
+    width: 60%;
+    margin: 0 auto;
+    text-align: left;
+    position: relative;
+    padding-left: 40px;
+}
+
+.poem::before {
+    content: '“';
+    font-size: 4em;
+    position: absolute;
+    left: 0;
+    top: -20px;
+    color: #ff69b4;
+}
+
+.poem p {
+    margin-bottom: 20px;
+}
+
+/* 我们的回忆 */
+.memories-section {
+    padding: 100px 0;
+    background-color: #fdfdfd;
+    text-align: center;
+}
+
+.memories-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    font-family: 'Pacifico', cursive;
+}
+
+.categories {
+    margin-bottom: 30px;
+}
+
+.category-btn {
+    background-color: #ff69b4;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+.category-btn:hover,
+.category-btn.active {
+    background-color: #db5a9d;
+}
+
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.photo-item {
+    width: 300px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.photo-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.photo-item:hover {
+    transform: scale(1.05);
+}
+
+.photo-info {
+    position: absolute;
+    bottom: 0;
+    background: rgba(255, 105, 180, 0.8);
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+}
+
+.photo-info h3 {
+    margin-bottom: 5px;
+}
+
+.photo-info p {
+    font-size: 0.9em;
+}
+
+/* 她的兴趣爱好 */
+.hobbies-section {
+    padding: 100px 0;
+    background-color: #fff0f5;
+    text-align: center;
+}
+
+.hobbies-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    font-family: 'Pacifico', cursive;
+}
+
+.hobby-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hobby-item {
+    background-color: #fff;
+    width: 250px;
+    margin: 15px;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.hobby-item .icon {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #ff69b4;
+}
+
+.hobby-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.hobby-item p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* 底部 */
+footer {
+    background-color: #ff69b4;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer p {
+    font-size: 1.2em;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .banner-content h1 {
+        font-size: 2em;
+    }
+
+    .banner-content p {
+        font-size: 1em;
+    }
+
+    .poem {
+        width: 80%;
+        padding-left: 20px;
+    }
+
+    .photo-item {
+        width: 80%;
+    }
+
+    .hobby-item {
+        width: 80%;
+    }
+}

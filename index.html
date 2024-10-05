@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>我们的纪念网站</title>
+    <!-- 引入自定义字体和图标库 -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <div class="logo">我们的故事</div>
+        <ul>
+            <li><a href="#home">首页</a></li>
+            <li><a href="#letter">情书</a></li>
+            <li><a href="#memories">回忆</a></li>
+            <li><a href="#hobbies">兴趣爱好</a></li>
+        </ul>
+    </nav>
+
+    <!-- 首页横幅 -->
+    <section id="home" class="banner">
+        <div class="banner-overlay"></div>
+        <div class="banner-content">
+            <h1>国庆节的相遇，武汉的浪漫</h1>
+            <p>2024年国庆节，我们在武汉相聚，定格了属于我们的美好瞬间。</p>
+            <a href="#memories" class="btn">查看回忆</a>
+        </div>
+    </section>
+
+    <!-- 写给她的情书 -->
+    <section id="letter" class="letter-section">
+        <div class="container">
+            <h2>写给她你的情书</h2>
+            <div class="poem">
+                <!-- 您的情诗内容 -->
+                <p>初二那年，我遇见了你，</p>
+                <p>在那青涩的校园里，心中悄悄埋下了喜欢的种子。</p>
+                <p>你的笑容像清风拂过心田，</p>
+                <p>自那时起，我的世界多了光彩，多了期盼。</p>
+                <!-- ...（省略部分情诗，为了篇幅） -->
+                <p>你是我的白月光，</p>
+                <p>照亮了我的青春，也照亮了我的未来。</p>
+                <p>无论前路多少风雨，我都会陪在你身旁，</p>
+                <p>因为，我爱的不只是你的光芒，</p>
+                <p>更是和你在一起时，那份简单而真实的快乐。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 我们的回忆 -->
+    <section id="memories" class="memories-section">
+        <div class="container">
+            <h2>我们的回忆</h2>
+            <!-- 分类导航 -->
+            <div class="categories">
+                <button class="category-btn active" data-category="all">全部</button>
+                <button class="category-btn" data-category="wuhan">武汉之旅</button>
+                <!-- 可以继续添加更多分类 -->
+            </div>
+            <!-- 照片画廊 -->
+            <div class="photo-gallery">
+                <!-- 示例照片 -->
+                <div class="photo-item" data-category="wuhan">
+                    <img src="images/memories/photo1.jpg" alt="武汉大学">
+                    <div class="photo-info">
+                        <h3>武汉大学的合照</h3>
+                        <p>日期：2024年10月3日</p>
+                        <p>地点：武汉大学</p>
+                    </div>
+                </div>
+                <div class="photo-item" data-category="wuhan">
+                    <img src="images/memories/photo2.jpg" alt="江滩">
+                    <div class="photo-info">
+                        <h3>江滩的美景</h3>
+                        <p>日期：2024年10月3日</p>
+                        <p>地点：汉口江滩</p>
+                    </div>
+                </div>
+                <!-- 可以继续添加更多照片 -->
+                <div class="photo-item" data-category="wuhan">
+                    <img src="images/memories/photo3.jpg" alt="江滩">
+                    <div class="photo-info">
+                        <h3>雨新自拍</h3>
+                        <p>日期：2024年10月3日</p>
+                        <p>地点：汉口江滩</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- 她的兴趣爱好 -->
+    <section id="hobbies" class="hobbies-section">
+        <div class="container">
+            <h2>你的兴趣爱好</h2>
+            <div class="hobby-list">
+                <div class="hobby-item">
+                    <i class="icon">&#128506;</i>
+                    <h3>旅行</h3>
+                    <p>探索世界的每一个角落，留下足迹和回忆。</p>
+                </div>
+                <div class="hobby-item">
+                    <i class="icon">&#128247;</i>
+                    <h3>摄影</h3>
+                    <p>用镜头记录生活的美好瞬间。</p>
+                </div>
+                <div class="hobby-item">
+                    <i class="icon">&#127859;</i>
+                    <h3>美食</h3>
+                    <p>热爱烹饪，喜欢尝试新的菜肴和味道。</p>
+                </div>
+                <!-- 可以继续添加更多兴趣爱好 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部 -->
+    <footer>
+        <p>永远爱你的</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
