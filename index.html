@@ -4,13 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <title>我们的纪念网站</title>
-    <!-- 引入自定义字体和图标库 -->
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" />
+    <style>
+        /* 简单的时间轴样式 */
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .timeline-event {
+            padding: 10px 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px 0;
+            background: #f9f9f9;
+            position: relative;
+        }
+
+        .timeline-event::before {
+            content: '';
+            position: absolute;
+            left: -15px;
+            top: 20px;
+            height: 10px;
+            width: 10px;
+            background: #4CAF50;
+            border-radius: 50%;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- 导航栏 -->
     <nav>
         <div class="logo">我们的故事</div>
         <ul>
@@ -18,10 +46,10 @@
             <li><a href="#letter">情书</a></li>
             <li><a href="#memories">回忆</a></li>
             <li><a href="#hobbies">兴趣爱好</a></li>
+            <li><a href="#timeline">时间轴</a></li>
         </ul>
     </nav>
 
-    <!-- 首页横幅 -->
     <section id="home" class="banner">
         <div class="banner-overlay"></div>
         <div class="banner-content">
@@ -31,17 +59,14 @@
         </div>
     </section>
 
-    <!-- 写给她的情书 -->
     <section id="letter" class="letter-section">
         <div class="container">
             <h2>写给她你的情书</h2>
             <div class="poem">
-                <!-- 您的情诗内容 -->
                 <p>初二那年，我遇见了你，</p>
                 <p>在那青涩的校园里，心中悄悄埋下了喜欢的种子。</p>
                 <p>你的笑容像清风拂过心田，</p>
                 <p>自那时起，我的世界多了光彩，多了期盼。</p>
-                <!-- ...（省略部分情诗，为了篇幅） -->
                 <p>你是我的白月光，</p>
                 <p>照亮了我的青春，也照亮了我的未来。</p>
                 <p>无论前路多少风雨，我都会陪在你身旁，</p>
@@ -51,21 +76,18 @@
         </div>
     </section>
 
-    <!-- 我们的回忆 -->
     <section id="memories" class="memories-section">
         <div class="container">
             <h2>我们的回忆</h2>
-            <!-- 分类导航 -->
             <div class="categories">
                 <button class="category-btn active" data-category="all">全部</button>
                 <button class="category-btn" data-category="wuhan">武汉之旅</button>
-                <!-- 可以继续添加更多分类 -->
             </div>
-            <!-- 照片画廊 -->
             <div class="photo-gallery">
-                <!-- 示例照片 -->
                 <div class="photo-item" data-category="wuhan">
-                    <img src="images/memories/photo1.jpg" alt="武汉大学">
+                    <a href="images/memories/photo1.jpg" data-lightbox="memories" data-title="武汉大学的合照">
+                        <img src="images/memories/photo1.jpg" alt="武汉大学">
+                    </a>
                     <div class="photo-info">
                         <h3>武汉大学的合照</h3>
                         <p>日期：2024年10月3日</p>
@@ -73,16 +95,19 @@
                     </div>
                 </div>
                 <div class="photo-item" data-category="wuhan">
-                    <img src="images/memories/photo2.jpg" alt="江滩">
+                    <a href="images/memories/photo2.jpg" data-lightbox="memories" data-title="江滩的美景">
+                        <img src="images/memories/photo2.jpg" alt="江滩">
+                    </a>
                     <div class="photo-info">
                         <h3>江滩的美景</h3>
                         <p>日期：2024年10月3日</p>
                         <p>地点：汉口江滩</p>
                     </div>
                 </div>
-                <!-- 可以继续添加更多照片 -->
                 <div class="photo-item" data-category="wuhan">
-                    <img src="images/memories/photo3.jpg" alt="江滩">
+                    <a href="images/memories/photo3.jpg" data-lightbox="memories" data-title="雨新自拍">
+                        <img src="images/memories/photo3.jpg" alt="江滩">
+                    </a>
                     <div class="photo-info">
                         <h3>雨新自拍</h3>
                         <p>日期：2024年10月3日</p>
@@ -90,9 +115,9 @@
                     </div>
                 </div>
             </div>
+        </div>
     </section>
 
-    <!-- 她的兴趣爱好 -->
     <section id="hobbies" class="hobbies-section">
         <div class="container">
             <h2>你的兴趣爱好</h2>
@@ -112,17 +137,31 @@
                     <h3>吃</h3>
                     <p>喜欢鸡蛋饼，还有汤达人方便面。</p>
                 </div>
-                <!-- 可以继续添加更多兴趣爱好 -->
             </div>
         </div>
     </section>
 
-    <!-- 底部 -->
+    <section id="timeline" class="timeline">
+        <h2>我们的时间轴</h2>
+        <div class="timeline-event">
+            <h3>2024年10月1日</h3>
+            <p>第一次见面，国庆节的武汉。</p>
+        </div>
+        <div class="timeline-event">
+            <h3>2024年10月3日</h3>
+            <p>一起游览武汉大学，拍摄了美丽的合照。</p>
+        </div>
+        <div class="timeline-event">
+            <h3>2024年10月4日</h3>
+            <p>漫步汉口江滩，享受浪漫时光。</p>
+        </div>
+    </section>
+
     <footer>
         <p>永远爱你的</p>
     </footer>
 
-    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
     <script src="scripts/main.js"></script>
 </body>
 

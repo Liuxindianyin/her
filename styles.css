@@ -339,3 +339,40 @@ footer p {
         width: 80%;
     }
 }
+
+/* 时间轴样式 */
+.timeline {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 0;
+    gap: 20px;
+}
+
+.timeline-event {
+    position: relative;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.timeline-event:hover {
+    transform: translateY(-5px);
+}
+
+.timeline-event::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 20px;
+    height: 20px;
+    width: 20px;
+    background: #4CAF50;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
